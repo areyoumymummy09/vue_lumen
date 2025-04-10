@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Taylor Swift Must Listen Ablums</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato%7CRaleway" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+      <h1 class="hidden">My Favouite ablums</h1>
+      <img src="images/hero_image.jpg" id="main-logo" alt="Hero image" />
+    </header>
+
+    <div class="grid-con" id="app">
+        <div class="col-span-full">
+       
+    
+          <div v-if="loadingAlbums">
+            <svg class="loader" viewBox="0 0 200 200" 
+            xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke-opacity="1" stroke="#FF37E6" stroke-width=".5" cx="100" cy="100" r="0"><animate attributeName="r" calcMode="spline" dur="2" values="1;80" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-width" calcMode="spline" dur="2" values="0;25" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" calcMode="spline" dur="2" values="1;0" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate></circle></svg>
+          </div>
+    
+          <nav id="character_nav">
+            <ul class="characters">
+            <li v-for="album in albumsData" :key="album.id">
+                <a href="#album" @click="getAlbum(album.id)">
+                  <img :src="`images/${album.poster}`" :alt="album.name" class="album-poster">
+                  <h3>{{ album.name }}</h3>
+                </a>
+              </li>
+              
+          </ul>
+          </nav>
+        </div>
+    
+        <div class="col-span-full" id="albumInfoCon">
+          <div v-if="loading">
+            <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="none" stroke-opacity="1" stroke="#FF37E6" stroke-width=".5" cx="100" cy="100" r="0"><animate attributeName="r" calcMode="spline" dur="2" values="1;80" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-width" calcMode="spline" dur="2" values="0;25" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" calcMode="spline" dur="2" values="1;0" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate></circle></svg>
+          </div>
+    
+          <section v-if="error">
+            {{ error }}
+          </section>
+          
+
+
+          <section id="instructions">
+            <h2 class="headline">Are you ready for it?</h2>
+            <p>
+              Use your mouse to hover / click for exclusive Taylor Swift experiences
+            </p>
+          </section>
+          
+          <footer class="sticky-footer">
+            <h3>All Images &copy; Taylor Swift Offical</h3>
+          </footer>
+      
+          <section class="lightbox lightbox_container" v-if="short_description">
+            <a href="" class="lightbox_close">X</a>
+            <div class="lightbox_content">
+              <img :src="`images/${concert_image}`" :alt="album_name" />
+              <article>
+                <h3 class="lb_heading">{{ album_name }}</h3>
+                <p class="lb_text">{{ short_description }}</p>
+              </article>
+            </div>
+          </section>
+          
+          
+    
+          
+          
+        </div>
+      </div>
+    </body>
+
+
+</html>

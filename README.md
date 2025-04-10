@@ -1,42 +1,24 @@
-# Taylor Swift Discography Explorer
+# Lumen PHP Framework
 
-A responsive web application that demonstrates the integration of a Vue.js frontend with a custom Lumen API backend to explore Taylor Swift's album collection.
+[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
+[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
 
-## Project Overview
+Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-This project showcases a single-page Vue.js application that connects to a Lumen API to fetch and display Taylor Swift's discography. The application allows users to view a sorted listing of her albums and click on individual albums to see detailed information in an elegant lightbox popup without page navigation.
+## Official Documentation
 
-## Features
+Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
-- **Vue.js Frontend**: Built with vanilla Vue.js (no .vue single file components) for a lightweight and efficient user interface
-- **Custom Lumen API**: Self-developed API with endpoints for listing Taylor Swift albums and retrieving individual album details
-- **Responsive Design**: Fully responsive layout that works seamlessly across mobile, tablet, and desktop devices
-- **Lightbox Feature**: Custom lightbox popup that displays detailed album information when a user clicks on an album
-- **Dynamic Content Loading**: Asynchronous data fetching with loading indicators and proper error handling
-- **Interactive UI**: Click-to-view functionality with smooth transitions between album list and detailed view
-- **GSAP Animations**: Enhanced user experience with GreenSock animations for album cards and lightbox interactions
+## Contributing
 
-## Technical Implementation
+Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-- Single HTML file structure with Vue.js instance
-- AJAX requests to connect frontend with backend API
-- Custom lightbox component created with Vue.js
-- Event-driven architecture for album selection and lightbox interactions
-- Mobile-first responsive design approach for album gallery
-- Error handling for network issues and API failures
-- GSAP animations for smooth transitions and engaging user experience
+## Security Vulnerabilities
 
-## Getting Started
-
-1. Clone this repository
-2. Set up the Lumen API (instructions in the API folder)
-3. Open `index.html` in your browser or set up a local server
-
-
-## Contributors
-
-Lai Yi Ting Elaine
+If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
-This project is part of a web development course assignment.
+The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
