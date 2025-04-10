@@ -1,0 +1,113 @@
+.lightbox {
+    width: 80vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    overflow-y: auto;
+  }
+  
+  .lightbox_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    z-index: 9999;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+  
+    &:hover {
+      color: red;
+    }
+  }
+  
+  .lightbox_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    color: white;
+    max-height: 95vh;
+    overflow-y: auto;
+  
+    .lightbox_content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+  
+      img {
+        width: 70%; 
+        justify-content: center;
+        max-height:50vh;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+  
+      article {
+        padding: 1rem;
+  
+        .lb_heading {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+          color: white;
+          text-align: center;
+        }
+  
+        .lb_text {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: white;
+          text-align: justify;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .lightbox_container {
+      .lightbox_content {
+        flex-direction: row;
+        align-items: center;
+      
+  
+        img {
+          width: 40%; 
+          max-width: 300px;
+          height: 100%;
+          max-height:90vh;
+
+          
+        }
+  
+        article {
+          flex: 1;
+  
+          .lb_heading {
+            font-size: 2rem;
+            text-align: left;
+          }
+  
+          .lb_text {
+            text-align: left;
+          }
+        }
+      }
+     .lightbox{
+        padding: 3rem
+     } 
+    }
+  }
+  

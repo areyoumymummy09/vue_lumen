@@ -1,0 +1,40 @@
+.sprite {
+	width: 150px;
+	height: 150px;
+	background-image: url(../images/TS_all.png);
+  }
+  
+  #speaknow {
+	background-position: -150px 0;
+  }
+  
+  #red {
+	background-position: -300px 0;
+  }
+  
+  #ts1989 {
+	background-position: -450px 0;
+  }
+  
+  #reputation {
+	background-position: -600px 0;
+  }
+  
+  #lover {
+	background-position: -750px 0;
+  }
+  
+  #fearless:hover,
+  #speaknow:hover,
+  #red:hover,
+  #ts1989:hover,
+  #reputation:hover,
+  #lover:hover {
+	background-position-y: 150px;
+  }
+  
+  #instructions {
+	padding: 20px;
+	text-align: center;
+  }
+  
